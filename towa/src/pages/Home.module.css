@@ -1,0 +1,49 @@
+/* Grid Container */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensure the container spans the full viewport height */
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card image {
+    width: 100%;
+}
+
+.card h3 {
+    margin: 1rem 1rem 0.5rem;
+}
+
+.card p{
+    margin: 0 1rem 1rem;
+    line-height: 1.4;
+    max-height: 2.8em;
+}
+
+

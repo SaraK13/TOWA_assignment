@@ -1,18 +1,22 @@
 /* Grid Container */
 .home {
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensure the container spans the full viewport height */
-    padding: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1;
 }
 
 .grid {
     display: grid;
     gap: 1rem;
+    grid-template-columns: 1fr; /* Default: One card per row (mobile) */
     max-width: 1200px;
-    width: 50%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .card {
@@ -41,9 +45,26 @@
 }
 
 .card p{
-    margin: 0 1rem 1rem;
-    line-height: 1.4;
+    margin: 0 1rem 2rem;
+    line-height: 1.4em;
     max-height: 2.8em;
+    text-overflow: ellipsis; /* Add three dots at the end of the trimmed line */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 1;
+    overflow: hidden; /* if text is in 3 lines, then content will be clamed. */
+    -webkit-box-orient: vertical;
 }
 
+/* Responsive */
+@media (min-width: 601px) { /* For small&large tablets */
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    }
+}
 
+@media (min-width: 1200px) { /* For desktops */
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    }
+}

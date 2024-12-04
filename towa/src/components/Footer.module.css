@@ -1,0 +1,38 @@
+.footer {
+    width: 100%;
+    background-color: #b2cbcb;
+    border-top: 1px solid #ddd;
+    padding: 2rem;
+    text-align: left;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+  
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+    color: #262727;
+}
+  
+.column {
+    margin-bottom: 1rem;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.column p {
+    margin: 0.5rem 0;
+}
+  

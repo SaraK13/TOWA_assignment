@@ -29,6 +29,10 @@ const Home = () => {
 
     return(
         <div className={styles.home}>
+            <div className={styles.searchContainer}>
+                <input type="text" placeholder="Search for a movie.." className={styles.searchBox}/>
+            </div>
+
             <div className={styles.grid}>
                 {films.map((film) => (
                     <a href={film.url} key={film.id} className={styles.card}>

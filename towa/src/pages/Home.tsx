@@ -11,8 +11,9 @@ interface Film {
 
 
 const Home = () => {
-    const [ films, setFilms ] = useState<Film[]>([]);
-    const [ searchTerm, setSearchTerm ] = useState("");
+    const [ films, setFilms ] = useState<Film[]>([]); // full list of films fetched from API
+    const [ searchTerm, setSearchTerm ] = useState(""); // searching words
+    const [ filteredFilms, setFilteredFilms ] = useState<Film[]>([]); // storing the filtered list of films based on searchTerm
     
     useEffect(() => {
         const fetchFilms = async() => {
@@ -28,6 +29,19 @@ const Home = () => {
         fetchFilms();
     }, []);
 
+    //filtering hook
+    useEffect(() => {
+        if(searchTerm.length >= 3){
+            //triggering the filter
+            const filtered = films.filter((film) =>
+                film.title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            setFilteredFilms(filtered);
+        } else {
+            setFilteredFilms(films); //less then 3 letters, display all films
+        }
+    }, [searchTerm, films]);
+
     return(
         <div className={styles.home}>
             <div className={styles.searchContainer}>
@@ -35,7 +49,7 @@ const Home = () => {
             </div>
 
             <div className={styles.grid}>
-                {films.map((film) => (
+                {filteredFilms.map((film) => (
                     <a href={film.url} key={film.id} className={styles.card}>
                         <img src={film.image} alt="item.title" />
                         <h3>{ film.title }</h3>

@@ -35,3 +35,15 @@
     text-decoration: none;
     color: inherit;
 }
+
+/* mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        font-size: 0.9rem;
+    }
+
+    .navbar ul {
+        gap: 1rem;
+    }
+}

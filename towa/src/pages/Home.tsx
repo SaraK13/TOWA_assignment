@@ -21,6 +21,7 @@ const Home = () => {
                 const response = await fetch("https://ghibliapi.vercel.app/films");
                 const data = await response.json();
                 setFilms(data);
+                setFilteredFilms(data);
             } catch (error){
                 console.error("Error fetching films: ", error);
             }

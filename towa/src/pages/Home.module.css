@@ -29,6 +29,8 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    justify-content: space-between; /* distribute image,title,text evenly within the card */
+    height: 100%; /* ensure all cards are the same height and fill the grid cell*/
 }
 
 .card:hover {
@@ -36,8 +38,12 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card image {
+.card img {
     width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover; /* how the content should be resized to fit within its container.*/
+    object-position: 0% 40%; /* which part of the content remain visible*/
 }
 
 .card h3 {
@@ -51,7 +57,7 @@
     text-overflow: ellipsis; /* Add three dots at the end of the trimmed line */
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
-    line-clamp: 1;
+    line-clamp: 2;
     overflow: hidden; /* if text is in 3 lines, then content will be clamed. */
     -webkit-box-orient: vertical;
 }

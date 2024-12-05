@@ -12,6 +12,7 @@ interface Film {
 
 const Home = () => {
     const [ films, setFilms ] = useState<Film[]>([]);
+    const [ searchTerm, setSearchTerm ] = useState("");
     
     useEffect(() => {
         const fetchFilms = async() => {
@@ -30,7 +31,7 @@ const Home = () => {
     return(
         <div className={styles.home}>
             <div className={styles.searchContainer}>
-                <input type="text" placeholder="Search for a movie.." className={styles.searchBox}/>
+                <input type="text" placeholder="Search for a movie.." className={styles.searchBox} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
             </div>
 
             <div className={styles.grid}>

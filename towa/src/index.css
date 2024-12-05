@@ -27,12 +27,12 @@ html, body {
 }
 
 a {
-  font-weight: 500;
   color: #0bb8b8;
   text-decoration: inherit;
 }
 a:hover {
   color: #0a7272;
+  font-weight: 700;
 }
 
 body {

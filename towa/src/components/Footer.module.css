@@ -27,6 +27,16 @@
     margin-bottom: 0.5rem;
 }
 
+.column ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.column a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .column p {
     margin: 0.5rem 0;
 }

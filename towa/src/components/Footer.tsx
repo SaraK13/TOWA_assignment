@@ -13,9 +13,9 @@ const Footer = () => {
                 {/* Col 2 */}
                 <div className={styles.column}>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -23,8 +23,8 @@ const Footer = () => {
                 <div className={styles.column}>
                     <p>Sara Konno</p>
                     <p>Mariahilfer Str. 90, 1070 Wien</p>
-                    <p>+43-660-1234-567</p>
-                    <p>abc@test.com</p>
+                    <p><a href="tel:+436601234567">+43-660-1234-567</a><br /></p>
+                    <p><a href="mailto:abc@test.com">abc@test.com</a></p>
                 </div>
             </div>
         </footer>

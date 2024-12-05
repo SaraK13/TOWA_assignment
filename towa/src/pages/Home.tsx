@@ -35,10 +35,10 @@ const Home = () => {
 
     //filtering hook
     useEffect(() => {
-        if(searchTerm.length >= 3){
-            //triggering the filter
+        const trimmedSearchTerm = searchTerm.trim(); // ignoring leading space
+        if(searchTerm.length >= 3){ //triggering as soon as 3 letters including space
             const filtered = films.filter((film) =>
-                film.title.toLowerCase().includes(searchTerm.toLowerCase())
+                film.title.toLowerCase().includes(trimmedSearchTerm.toLowerCase())
             );
             setFilteredFilms(filtered);
         } else {

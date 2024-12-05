@@ -1,8 +1,17 @@
 import styles from "./Home.module.css";
 import { useEffect, useState } from "react";
 
+interface Film {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    url: string;
+}
+
+
 const Home = () => {
-    const [ films, setFilms ] = useState([]);
+    const [ films, setFilms ] = useState<Film[]>([]);
     
     useEffect(() => {
         const fetchFilms = async() => {

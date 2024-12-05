@@ -1,5 +1,5 @@
 # TOWA_assignment
-A React application for browsing Studio Ghible films, featuring responsive design and search functionality.
+A React application for browsing Studio Ghibli films, featuring responsive design and search functionality.
 
 ---
 

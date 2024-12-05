@@ -30,4 +30,21 @@
 .column p {
     margin: 0.5rem 0;
 }
-  
+
+/* mobile */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: row;
+        gap: 2rem; /* space between columns */
+        font-size: 0.8rem;
+    }
+
+    .column {
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .column p {
+        margin: 4px;
+    }
+}

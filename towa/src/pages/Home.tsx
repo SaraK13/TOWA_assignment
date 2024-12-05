@@ -14,6 +14,7 @@ const Home = () => {
     const [ films, setFilms ] = useState<Film[]>([]); // full list of films fetched from API
     const [ searchTerm, setSearchTerm ] = useState(""); // searching words
     const [ filteredFilms, setFilteredFilms ] = useState<Film[]>([]); // storing the filtered list of films based on searchTerm
+    const [ isLoading, setIsLoading ] = useState(true);
     
     useEffect(() => {
         const fetchFilms = async() => {
@@ -22,8 +23,10 @@ const Home = () => {
                 const data = await response.json();
                 setFilms(data);
                 setFilteredFilms(data);
+                setIsLoading(false); // Data fetched, stop loading
             } catch (error){
                 console.error("Error fetching films: ", error);
+                setIsLoading(false);
             }
         };
 
@@ -49,15 +52,17 @@ const Home = () => {
                 <input type="text" placeholder="Search for a movie.." className={styles.searchBox} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
             </div>
 
-            <div className={styles.grid}>
-                {filteredFilms.map((film) => (
-                    <a href={film.url} key={film.id} className={styles.card}>
-                        <img src={film.image} alt="item.title" />
-                        <h3>{ film.title }</h3>
-                        <p>{ film.description }</p>
-                    </a>
-                ))}
-            </div>
+            {isLoading ? (<p className={styles.loading}>Loading movies...</p>) : (
+                <div className={styles.grid}>
+                    {filteredFilms.map((film) => (
+                        <a href={film.url} key={film.id} className={styles.card}>
+                            <img src={film.image} alt="item.title" />
+                            <h3>{ film.title }</h3>
+                            <p>{ film.description }</p>
+                        </a>
+                    ))}
+                </div>)
+            }
         </div>
     )
 }

@@ -29,6 +29,13 @@
     box-sizing: border-box;
 }
 
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #262727;
+    margin-top: 2rem;
+}
+
 .grid {
     display: grid;
     gap: 1rem;

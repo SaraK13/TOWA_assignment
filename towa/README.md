@@ -1,7 +1,8 @@
 # TOWA_assignment
 A React application for browsing Studio Ghibli films, featuring responsive design and search functionality.
 
----
+## Tech Stack
+[![My Skills](https://skillicons.dev/icons?i=react,ts,css,vite,npm)](https://skillicons.dev)
 
 ## Features
 1. **Responsive Design:**
@@ -20,12 +21,10 @@ A React application for browsing Studio Ghibli films, featuring responsive desig
         - Title and short description.
         - Clickable card links to the corresponding details.
 
----
-
 ## How to run
 ### Prerequisites
-- Node.js (v14+)
-- npm (or yarn)
+- `Node.js (v14+)`
+- `npm (or yarn)`
 
 ### Steps to Run locally
 1. Clone rhe repository:
@@ -33,13 +32,11 @@ A React application for browsing Studio Ghibli films, featuring responsive desig
 git clone https://github.com/SaraK13/TOWA_assignment.git
 cd towa
 ```
-
 2. Install dependencies:
 ```bash
 npm install
 # or yarn install
 ```
-
 3. Start the development server:
 ```bash
 npm run dev
@@ -49,8 +46,6 @@ npm run dev
 ```
 http://localhost:5173
 ```
-
----
 
 ## Project Structure
 ```

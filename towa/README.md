@@ -28,24 +28,24 @@ A React application for browsing Studio Ghibli films, featuring responsive desig
 
 ### Steps to Run locally
 1. Clone the repository:
-```bash
-git clone https://github.com/SaraK13/TOWA_assignment.git
-cd towa
-```
+    ```bash
+    git clone https://github.com/SaraK13/TOWA_assignment.git
+    cd towa
+    ```
 2. Install dependencies:
-```bash
-npm install
-# or yarn install
-```
+    ```bash
+    npm install
+    # or yarn install
+    ```
 3. Start the development server:
-```bash
-npm run dev
-# or yarn dev
-```
+    ```bash
+    npm run dev
+    # or yarn dev
+    ```
 4. Open your browser and navigate to:
-```
-http://localhost:5173
-```
+    ```
+    http://localhost:5173
+    ```
 
 ## Project Structure
 ```

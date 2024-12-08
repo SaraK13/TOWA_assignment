@@ -22,7 +22,7 @@ const Home = () => {
                 const response = await fetch("https://ghibliapi.vercel.app/films");
                 const data = await response.json();
                 setFilms(data);
-                setFilteredFilms(data);
+                setFilteredFilms(data); // ensuring filteredFilms have same films at initial rendering
                 setIsLoading(false); // Data fetched, stop loading
             } catch (error){
                 console.error("Error fetching films: ", error);

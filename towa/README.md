@@ -27,7 +27,7 @@ A React application for browsing Studio Ghibli films, featuring responsive desig
 - `npm (or yarn)`
 
 ### Steps to Run locally
-1. Clone rhe repository:
+1. Clone the repository:
 ```bash
 git clone https://github.com/SaraK13/TOWA_assignment.git
 cd towa
